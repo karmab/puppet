@@ -1,0 +1,9 @@
+<%=oracledb %> =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = <%= oracleip %>)(PORT = <%= oracleport %>))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = <%=oracledb %>)
+    )
+  )

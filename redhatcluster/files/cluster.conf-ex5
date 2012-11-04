@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<cluster config_version="12" name="prout_cluster">
+	<quorumd device="/dev/vg_quorum/lv_quorum" interval="5" label="prout_quorum" tko="10" votes="1">
+		<heuristic interval="10" program="ping -c1 -w1 192.168.1.1" score="1" tko="3"/>
+	</quorumd>
+	<fence_daemon post_fail_delay="0" post_join_delay="3"/>
+	<clusternodes>
+		<clusternode name="myprout1" nodeid="1" votes="1">
+			<fence>
+				<method name="1">
+					<device name="fence_vmware1"/>
+				</method>
+			</fence>
+		</clusternode>
+		<clusternode name="myprout2" nodeid="2" votes="1">
+			<fence>
+				<method name="1">
+					<device name="fence_vmware2"/>
+				</method>
+			</fence>
+		</clusternode>
+	</clusternodes>
+	<cman expected_votes="3" two_node="0"/>
+	<fencedevices>
+		<fencedevice agent="fence_vmware" ipaddr="192.168.2.198" login="fence" name="fence_vmware1" passwd="france" port="prout1"/>
+		<fencedevice agent="fence_vmware" ipaddr="192.168.2.198" login="fence" name="fence_vmware2" passwd="france" port="prout2"/>
+	</fencedevices>
+	<rm>
+		<failoverdomains>
+			<failoverdomain name="prout" ordered="1" restricted="0">
+				<failoverdomainnode name="myprout2" priority="2"/>
+				<failoverdomainnode name="myprout1" priority="1"/>
+			</failoverdomain>
+		</failoverdomains>
+		<resources>
+			<ip address="192.168.1.43/23" monitor_link="1"/>
+			<lvm name="proutlvm" vg_name="vg_shared"/>
+			<fs device="/dev/vg_shared/lv_prout_mysql" force_fsck="0" force_unmount="1" fstype="ext3" mountpoint="/var/lib/mysql" name="proutfs" options="" self_fence="1"/>
+			<mysql config_file="/etc/my.cnf" listen_address="192.168.1.43" mysqld_options="" name="proutmysql" shutdown_wait="300" startup_wait="300"/>
+			<mysql config_file="/etc/my_blue.cnf" listen_address="192.168.1.52" mysqld_options="--ledir=/usr/local/mysql_blue/bin --basedir=/usr/local/mysql_blue" name="bluemysql" shutdown_wait="150" startup_wait="300"/>
+		</resources>
+		<service autostart="1" domain="prout" name="prout">
+			<ip ref="192.168.1.43/23">
+				<lvm ref="proutlvm">
+					<fs ref="proutfs">
+						<mysql ref="proutmysql"/>
+					</fs>
+				</lvm>
+			</ip>
+		</service>
+	</rm>
+</cluster>

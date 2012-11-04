@@ -1,0 +1,4 @@
+auth       required     pam_env.so
+auth       sufficient   pam_unix.so likeauth nullok
+auth       sufficient   pam_ldap.so use_first_pass
+auth       required     pam_deny.so

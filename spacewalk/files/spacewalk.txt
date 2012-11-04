@@ -1,0 +1,16 @@
+admin-email = karimboumedhel@gmail.com
+ssl-set-org = Karmalabs
+ssl-set-org-unit = spacewalk
+ssl-set-city = Madrid
+ssl-set-state = Madrid
+ssl-set-country = ES
+ssl-password = spacewalk
+ssl-set-email = karimboumedhel@gmail.com
+ssl-config-sslvhost = Y
+db-backend=oracle
+db-user=spacewalk
+db-password=spacewalk
+db-name=XE
+db-host=localhost
+db-port=1521
+enable-tftp=Y

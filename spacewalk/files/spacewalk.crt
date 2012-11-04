@@ -1,0 +1,92 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            98:28:b6:47:2b:c8:d6:cf
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=ES, ST=Madrid, L=Madrid, O=Karmalabs, OU=hendrix, CN=hendrix
+        Validity
+            Not Before: Oct  6 12:36:26 2011 GMT
+            Not After : Sep 29 12:36:26 2036 GMT
+        Subject: C=ES, ST=Madrid, L=Madrid, O=Karmalabs, OU=hendrix, CN=hendrix
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:a0:ed:99:9b:2d:13:f7:c3:df:9e:f1:be:73:a7:
+                    0b:60:60:b9:cb:80:bb:de:5a:6b:cf:02:af:98:bf:
+                    db:72:85:81:22:de:b0:61:0b:a9:07:b0:e9:c1:a9:
+                    81:80:f7:f7:43:08:2f:05:bd:42:e4:e1:1f:de:c2:
+                    f1:56:44:d7:31:47:85:ff:8c:a5:86:f0:81:75:56:
+                    0e:15:ad:6f:3c:3c:0a:dd:93:c5:a4:97:cf:01:de:
+                    34:6c:30:8d:13:20:67:49:29:7d:4f:19:84:ec:6d:
+                    2a:d6:17:24:3c:f0:c5:de:6e:f9:7a:91:98:8d:e0:
+                    70:53:c6:23:20:0d:75:45:4f:f8:e1:73:42:12:16:
+                    1b:4d:2d:6a:0a:31:1d:f6:c1:5f:df:a7:8f:08:da:
+                    49:1d:9e:79:c0:bd:f5:ae:5e:8f:d2:dc:11:5e:53:
+                    aa:52:86:51:c9:91:65:de:8f:42:aa:1e:be:33:ee:
+                    39:f1:79:b4:90:a7:0e:87:90:75:f3:11:09:db:f1:
+                    62:b9:40:20:b7:9e:71:f7:dd:7e:49:0a:a1:81:9d:
+                    5d:32:50:ee:7e:23:9c:7f:fe:e9:bb:22:b3:f5:3b:
+                    d9:fa:88:9e:54:67:3a:4c:da:ef:76:c7:31:11:5b:
+                    a4:97:53:b9:e9:18:f2:58:17:7a:5d:f0:14:7b:da:
+                    a3:b9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment, Certificate Sign
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            Netscape Comment: 
+                RHN SSL Tool Generated Certificate
+            X509v3 Subject Key Identifier: 
+                44:E6:93:E4:23:CB:5F:D0:0F:50:C4:46:A1:18:7C:4B:61:7F:B8:E3
+            X509v3 Authority Key Identifier: 
+                keyid:44:E6:93:E4:23:CB:5F:D0:0F:50:C4:46:A1:18:7C:4B:61:7F:B8:E3
+                DirName:/C=ES/ST=Madrid/L=Madrid/O=Karmalabs/OU=hendrix/CN=hendrix
+                serial:98:28:B6:47:2B:C8:D6:CF
+
+    Signature Algorithm: sha1WithRSAEncryption
+        1e:bd:c9:e6:ec:49:73:0f:9c:4d:27:db:a7:e7:7d:69:13:74:
+        a5:76:7a:b5:a4:0b:9a:35:06:71:0a:99:b1:07:c0:46:ad:81:
+        30:f8:cc:76:a6:d3:2d:79:e2:a8:62:b8:2c:07:97:f7:d7:2e:
+        9b:8d:96:a3:55:40:32:01:7c:7a:db:be:f2:6f:a6:3f:ac:52:
+        6b:af:74:06:ed:d5:a6:e0:2a:4f:47:d8:ef:79:9e:de:b4:cf:
+        e7:69:a3:fb:bf:a5:dc:d3:52:da:16:cc:0d:1b:76:25:22:74:
+        d7:31:13:53:ae:8d:ec:9b:b2:a2:89:e1:84:29:7f:86:9e:f9:
+        c9:51:36:fe:2d:0e:bf:d0:ff:97:e8:0d:12:0d:67:7d:be:b3:
+        2d:e8:c6:12:41:7e:a6:cb:6b:0f:c3:a0:cf:9e:93:24:56:29:
+        7e:7b:f9:4a:60:83:f0:26:79:1b:a3:1e:b7:21:63:2e:07:a3:
+        5e:4d:e3:63:3a:98:ad:25:43:6e:9d:6a:58:c9:f0:cb:c6:88:
+        4a:d9:7c:30:f4:93:fb:26:87:0f:12:4c:0b:6d:42:49:68:70:
+        f0:d6:b4:4e:33:8d:68:f2:db:29:a1:ef:0f:33:3f:be:c3:92:
+        70:19:7d:15:a7:a4:9c:9e:af:ee:af:d7:84:38:d8:0c:4d:32:
+        0e:f9:30:49
+-----BEGIN CERTIFICATE-----
+MIIEeTCCA2GgAwIBAgIJAJgotkcryNbPMA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNV
+BAYTAkVTMQ8wDQYDVQQIEwZNYWRyaWQxDzANBgNVBAcTBk1hZHJpZDEQMA4GA1UE
+ChMHVGVsdmVudDEQMA4GA1UECxMHaGVuZHJpeDEQMA4GA1UEAxMHaGVuZHJpeDAe
+Fw0xMTEwMDYxMjM2MjZaFw0zNjA5MjkxMjM2MjZaMGUxCzAJBgNVBAYTAkVTMQ8w
+DQYDVQQIEwZNYWRyaWQxDzANBgNVBAcTBk1hZHJpZDEQMA4GA1UEChMHVGVsdmVu
+dDEQMA4GA1UECxMHaGVuZHJpeDEQMA4GA1UEAxMHaGVuZHJpeDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKDtmZstE/fD357xvnOnC2BgucuAu95aa88C
+r5i/23KFgSLesGELqQew6cGpgYD390MILwW9QuThH97C8VZE1zFHhf+MpYbwgXVW
+DhWtbzw8Ct2TxaSXzwHeNGwwjRMgZ0kpfU8ZhOxtKtYXJDzwxd5u+XqRmI3gcFPG
+IyANdUVP+OFzQhIWG00tagoxHfbBX9+njwjaSR2eecC99a5ej9LcEV5TqlKGUcmR
+Zd6PQqoevjPuOfF5tJCnDoeQdfMRCdvxYrlAILeecffdfkkKoYGdXTJQ7n4jnH/+
+6bsis/U72fqInlRnOkza73bHMRFbpJdTuekY8lgXel3wFHvao7kCAwEAAaOCASow
+ggEmMAwGA1UdEwQFMAMBAf8wCwYDVR0PBAQDAgKkMB0GA1UdJQQWMBQGCCsGAQUF
+BwMBBggrBgEFBQcDAjAxBglghkgBhvhCAQ0EJBYiUkhOIFNTTCBUb29sIEdlbmVy
+YXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUROaT5CPLX9APUMRGoRh8S2F/uOMw
+gZcGA1UdIwSBjzCBjIAUROaT5CPLX9APUMRGoRh8S2F/uOOhaaRnMGUxCzAJBgNV
+BAYTAkVTMQ8wDQYDVQQIEwZNYWRyaWQxDzANBgNVBAcTBk1hZHJpZDEQMA4GA1UE
+ChMHVGVsdmVudDEQMA4GA1UECxMHaGVuZHJpeDEQMA4GA1UEAxMHaGVuZHJpeIIJ
+AJgotkcryNbPMA0GCSqGSIb3DQEBBQUAA4IBAQAevcnm7ElzD5xNJ9un531pE3Sl
+dnq1pAuaNQZxCpmxB8BGrYEw+Mx2ptMteeKoYrgsB5f31y6bjZajVUAyAXx6277y
+b6Y/rFJrr3QG7dWm4CpPR9jveZ7etM/naaP7v6Xc01LaFswNG3YlInTXMRNTro3s
+m7KiieGEKX+GnvnJUTb+LQ6/0P+X6A0SDWd9vrMt6MYSQX6my2sPw6DPnpMkVil+
+e/lKYIPwJnkbox63IWMuB6NeTeNjOpitJUNunWpYyfDLxohK2Xww9JP7JocPEkwL
+bUJJaHDw1rROM41o8tspoe8PMz++w5JwGX0Vp6Scnq/ur9eEONgMTTIO+TBJ
+-----END CERTIFICATE-----

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<cluster config_version="19" name="prout">
+	<quorumd device="/dev/quorumvg/lvquorum" interval="2" tko="5" votes="1">
+		<heuristic interval="10" program="ping -c1 -w1 192.168.1.1" score="1" tko="3"/>
+	</quorumd>
+	<fence_daemon post_fail_delay="0" post_join_delay="3"/>
+	<clusternodes>
+		<clusternode name="prout1" nodeid="1" votes="1">
+			<fence>
+				<method name="1">
+					<device name="fence_vmware1"/>
+				</method>
+			</fence>
+		</clusternode>
+		<clusternode name="prout2" nodeid="2" votes="1">
+			<fence>
+				<method name="1">
+					<device name="fence_vmware2"/>
+				</method>
+			</fence>
+		</clusternode>
+	</clusternodes>
+	<cman expected_votes="3" two_node="0"/>
+	<fencedevices>
+		<fencedevice agent="fence_vmware" ipaddr="192.168.2.198" login="fence" name="fence_vmware1" passwd="france" port="prout1"/>
+		<fencedevice agent="fence_vmware" ipaddr="192.168.2.198" login="fence" name="fence_vmware2" passwd="france" port="prout2"/>
+	</fencedevices>
+	<rm>
+		<failoverdomains>
+			<failoverdomain name="prout" ordered="1" restricted="0">
+				<failoverdomainnode name="prout2" priority="2"/>
+				<failoverdomainnode name="prout1" priority="1"/>
+			</failoverdomain>
+		</failoverdomains>
+		<resources>
+			<ip address="192.168.1.125/23" monitor_link="1"/>
+			<lvm lv_name="" name="datavg" vg_name="datavg"/>
+		        <fs device="/dev/datavg/lvprout" force_fsck="0" force_unmount="1" fstype="ext4" mountpoint="/opt" name="lvprout" options="acl" self_fence="1"/>
+		        <fs device="/dev/datavg/lvpgsql" force_fsck="0" force_unmount="1" fstype="ext4" mountpoint="/var/lib/pgsql" name="lvpgsql" options="acl" self_fence="1"/>
+		        <script file="/etc/init.d/httpd" name="httpd"/>
+		        <script file="/etc/init.d/crowd" name="crowd"/>
+		        <script file="/etc/init.d/postfix" name="postfix"/>
+		        <script file="/etc/init.d/postgresql" name="postgresql"/>
+		</resources>
+		<service autostart="1" domain="prout" name="prout">
+			<lvm ref="datavg"/>
+			<fs ref="lvprout"/>
+			<fs ref="lvpgsql"/>
+			<ip ref="192.168.1.125/23" />
+			<script ref="httpd"/>
+			<script ref="crowd"/>
+			<script ref="postfix"/>
+			<script ref="postgresql"/>
+		</service>
+	</rm>
+<totem consensus="4800" join="60" token="22000" token_retransmits_before_loss_const="20"/>
+</cluster>
