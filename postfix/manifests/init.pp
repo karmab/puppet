@@ -33,6 +33,6 @@ class postfix {
     enable     => true ,
     hasrestart => true,
     hasstatus  => true, 
-    subscribe  => File['/etc/postfix/main.cf];
+    subscribe  => File['/etc/postfix/main.cf'];
           }
 }
